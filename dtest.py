@@ -1,10 +1,17 @@
 # This is a quick and dirty disk tester
+#
+# The problem is macos now requires permission to access the entire disk. Full Disk Access needs
+# to be granted. Even root doesn't have permissions.
+# [Errno 1] Operation not permitted: '/dev/disk1'
+# [Errno 2] No such file or directory: '/dev/disk2'
+# [Errno 2] No such file or directory: '/dev/disk3'
+
 import os
 
 possible_drives = [
-        "/dev/disk1", #MacOSX 
-        "/dev/disk2",
-        "/dev/disk3",
+        "/dev/rdisk1", #MacOSX 
+        "/dev/rdisk2",
+        "/dev/rdisk3",
         ]
 
 SECTOR_SIZE = 512
