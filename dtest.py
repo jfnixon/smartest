@@ -6,6 +6,8 @@
 # [Errno 2] No such file or directory: '/dev/disk2'
 # [Errno 2] No such file or directory: '/dev/disk3'
 
+# So we need to figure out how to give pythono full disk access
+
 import os
 
 possible_drives = [
