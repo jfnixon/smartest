@@ -26,6 +26,9 @@ for drive in possible_drives:
         fd = os.open(drive, os.O_RDONLY)
         br = 1
 
+        # main loop, we read the sectors here.
+        # Would also add in SMART tests
+
         while br > 0:
             br = os.readv(fd, [buf1, buf2])
             btotal += br
